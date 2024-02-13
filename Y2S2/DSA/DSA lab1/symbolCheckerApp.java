@@ -19,12 +19,12 @@ public class symbolCheckerApp {
 			
 			System.out.println();
 			
-			System.out.print("try again ? ");
+			System.out.print("Press Y to try again :");
 			checkletter = sc.next();
 			System.out.println();
 
 			
-		} while(checkletter.equals("Y"));
+		} while(checkletter.equals("Y") || checkletter.equals("y"));
 		
 	}
 
