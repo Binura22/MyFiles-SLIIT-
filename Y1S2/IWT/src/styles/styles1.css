@@ -1,0 +1,89 @@
+body{
+	background-image: url("3.JPG");
+}
+/*for image aline*/
+.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*font sizes*/
+h1.a{
+	font-size: 16px;
+}
+
+
+h3#header{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 32pix;
+}
+
+/*hr line*/
+hr.c{
+        border: none;
+        height: 2px;
+        background: black;
+        margin:10px 225px 10px 225px;
+}
+
+/*for nevigationbar */
+.menu{
+	margin: 2px 225px 10px 225px;
+	padding: 15px;
+	list-style:none;
+	display: flex;
+	background-color: black;
+	
+}
+
+li a{
+		/*display: block;*/
+	margin:10px 10px;
+	color: white;
+	text-align: center;
+				
+}
+
+
+.productData{
+	background-color: white;
+	padding: 3px;
+}
+
+th.col1{
+	text-align: center;
+}
+
+th.col2{
+	text-align: left;
+}
+
+div.tb1{
+	margin-top: 1px;
+	margin-bottom: 1px;
+	margin-left: 1px;
+	margin-right:1px;
+}
+
+div.newslayout{
+	border: 3px solid purple;
+	margin: 25px 220px 20px 220px;
+}
+
+.bttn1{
+	margin: 8px 4px 4px 4px;
+	width:20%;
+	height:50px;
+	background-color: pink;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.param{
+	margin: 2px 225px 10px 225px;
+	padding: 15px;
+	text-align: left;
+	font-size: 20px;
+}
