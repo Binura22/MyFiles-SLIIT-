@@ -65,6 +65,7 @@ public class Tree {
 		}
 	}
 	public void TraverseInorder() {
+		System.out.println("InOrder :");
 		inOrder(root);	
 	}
 
@@ -77,6 +78,7 @@ public class Tree {
 
 	}
 	public void TraversePreorder() {
+		System.out.println("PreOrder :");
 		preOrder(root);	
 	}
 
@@ -89,6 +91,7 @@ public class Tree {
 	}
 	
 	public void TraversePostorder() {
+		System.out.println("PostOrder :");
 		postOrder(root);	
 	}
 
