@@ -1,0 +1,96 @@
+print(1:10) #print numbers 1 to 10
+
+getwd() #get current working directory
+
+setwd("C:\\Users\\it22601674\\Desktop\\P&S lab1")  #change directory
+
+#help
+?solve
+
+help("data.frame")
+
+#install packages
+install.packages("ggplo2")
+
+#scalar operators
+
+2+8 #add
+
+10-5 #sub
+
+5*2 #mul
+
+40/5 #div
+
+2^2 #pow
+
+600%%2 #mod
+
+600%/%2 #integer div
+
+
+#logical operators
+X=5
+Y=-4
+
+isTRUE(X==Y) #equal
+isTRUE(X<=Y) #greater
+isTRUE(X==5) #exactly equal
+isTRUE(X<6 & Y>0) #and
+isTRUE(X<0 | Y>0) #or
+isTRUE(X!=Y) #not equal
+
+
+#assignment operators
+
+#local environment
+a = 5
+a <- 5
+
+#global environment 
+a<<-5
+
+
+#vector
+vector <- c(1,2,3,4,5)
+vector
+class(vector) #check class
+
+ABC <-c("a","b","c","d","e")
+ABC
+class(ABC)
+
+#factor
+gender <-c(0,1,0,1,0,0,1)
+gender
+
+Gender <- factor(gender,c(0,1),c("male","female"))
+Gender
+
+#list
+p<-c(1,2,3)
+q<-"red"
+r<-23
+p
+q
+r
+
+data<- list(p,q,r)
+data
+
+#matrix
+
+#row wise
+matrix1 <- matrix(c(1,2,3,4),nrow = 2, ncol = 2,byrow = TRUE)
+matrix1
+
+#colwise
+matrix2 <- matrix(c(1,2,3,4),nrow = 2, ncol = 2,byrow = FALSE)
+matrix2
+
+#data frame
+height <-c(10,21,14,25)
+weight <-c(26,54,64,55)
+
+data_set <- data.frame(height,weight)
+data_set
