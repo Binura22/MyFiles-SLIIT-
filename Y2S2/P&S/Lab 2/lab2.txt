@@ -1,0 +1,135 @@
+a <- 5
+b <-10
+
+if(b>a){
+  print("b is grater than a")
+}
+
+a <- 8
+b <- 4
+
+if(b>a){
+  print("b is grater than a")
+} else {
+  print("a is grater than b")
+}
+
+#nested if else
+if(a>b){
+  print("a is grater than b")
+} else if(a==b) {
+  print("a and b are equal")
+} else {
+  print("b is grater than a")
+}
+
+#while loop
+
+i <- -1
+while(i<6){
+  print(i)
+  i = i + 1 #i++ is not working in R
+}
+
+#for loop
+
+for(x in 1:20){
+  print(x)
+}
+
+getwd()
+setwd("C:\\Users\\it22601674\\Desktop\\P&S lab2\\Data")
+getwd()
+
+#import data set
+data <- read.csv("DATA 2.csv",header = TRUE, sep = ",")
+data
+
+#import text file
+data1 <- read.table("DATA 3.txt",header = TRUE, sep = ",")
+data1
+
+#view dataset in table
+fix(data)
+
+write.csv()
+write.table()
+
+
+index <- c(1,2,3)
+name <- c("AAA","BBB","CCC")
+marks <- c(52,68,96)
+
+#create a data frame
+dataframe <- data.frame(index,name,marks)
+dataframe
+
+#save dataframe in txt file
+write.table(dataframe,"dataframe1.txt")
+
+
+#function
+Function1 <- function(a,b){
+  x <- a + b
+  print(x)
+}
+
+Function1(4,6)
+
+#Quadratic function
+
+quadRoots <- function(a,b,c){
+  x1 = (-b + sqrt(b^2 - 4*a*c)/2*a)
+  x2 = (-b - sqrt(b^2 - 4*a*c)/2*a)
+  print(x1)
+  print(x2)
+}
+
+quadRoots(2,3,1)
+
+#Q2 ans = 4.125
+x <- c(1,2,3) 
+x[1]/x[2]^3-1+2*x[3]-x[2-1] 
+
+#Q4 ans = 6
+vec <- c(1:20)
+sum(vec%%3 == 0)
+
+#Q6
+vec1 <- c(53,56,85,34,21,91,27)
+max <- 0
+maxIndex <- 0
+
+for(i in 1:length(vec1)){
+  if(max < vec1[i]){
+    max <- vec1[i]
+    maxIndex <- i
+  }
+}
+ 
+maxIndex
+
+#Q7
+which.max(vec1)
+
+#Q8
+A <- 0
+
+moneyOwned <- function(P,R,n){
+  for(i in 1:n){
+    A = P * (1+(R/100)^i)
+    print(A)
+  }
+}
+
+moneyOwned(5000,11.5,15)
+
+
+
+
+
+
+
+
+
+
