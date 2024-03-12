@@ -1,0 +1,77 @@
+getwd()
+setwd("C:\\Users\\it22601674\\Desktop\\it22601674")
+getwd()
+
+#import data set into Rstudio
+
+data <- read.csv("Data 3.csv")
+data
+
+#ditro maod
+fix(data)
+
+#rename columns
+names(data) <-c("Age","Gender","Accommodation")
+fix(data)
+
+#rename categorical data
+data$Gender<-factor(data$Gender,c(1,2),c("Male","Female"))
+fix(data)
+
+data$Accommodation <-factor(data$Accommodation,c(1,2,3),c("Stays at Home","Boarded Students","Lodging"))
+fix(data)
+
+#Q1 - run attach command twice
+attach(data)
+
+#Q2 - frequency table
+Gender.freq<-table(Gender)
+Gender.freq
+
+Accommodation.freq <- table(Accommodation)
+Accommodation.freq
+
+#draw pie chart
+pie(Gender.freq, main = "Pie chart for gender")
+pie(Accommodation.freq, main = "Pie chart for Accommodation")
+
+barplot(Gender.freq, main = "bar chart for gender",ylab = "freqency")
+abline(h=0) #To add x-axis
+
+barplot(Accommodation.freq, main = "bar chart for Accommodation",ylab = "freqency")
+abline(h=0)
+
+boxplot(Age, main="Boxployt for age", ylab = "Age", outpct=1)
+
+
+#Q3
+gender_accommodation.freq<-table(Gender,Accommodation)
+gender_accommodation.freq
+
+#stach bar chart
+barplot(gender_accommodation.freq, main = "bar chart for Gender and Accommodation",legend = row.names(gender_accommodation.freq))
+abline(h=0)
+
+#cluster bar chart
+barplot(gender_accommodation.freq, beside = TRUE, main="Gender & Accommodation",legend = row.names(gender_accommodation.freq))
+abline(h=0)
+
+#Q4
+boxplot(Age~Gender,main = "boxplot for age by gender", xlab = "gender", ylab = "Age")
+
+boxplot(Age~Accommodation,main = "boxplot for age by Accommodation", xlab = "accommodation", ylab = "Age", outpct=18)
+
+#Q5
+xtabs(Age~Gender+Accommodation)/gender_accommodation.freq
+
+
+
+
+
+
+
+
+
+
+
+
