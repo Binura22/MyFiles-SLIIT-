@@ -1,0 +1,114 @@
+setwd("C:\\Users\\it22601674\\Desktop\\it22601674")
+getwd()
+
+data1 <- read.table("Data.txt" ,header = TRUE, sep=",")
+data1
+
+fix(data1)
+
+names(data1) <-c("x1","x2")
+fix(data1)
+
+attach(data1)
+
+hist(x2,main = "Histogram for anumbers of shareholders")
+abline(h=0)
+
+#Q2
+#n = no of classes
+#length = n+1
+#breaks - number of cells
+hist(x2,main = "Histogram for anumbers of shareholders",
+     breaks=seq(130,270,length=8), right = FALSE)
+
+
+#Q3
+
+#first step
+histogram <-hist(x2,main = "Histogram for anumbers of shareholders",
+                 breaks=seq(130,270,length=8), right = FALSE)
+breaks<-round(histogram$breaks)
+breaks
+abline(h=0)
+
+
+#seconde step
+freq <- histogram$counts
+freq
+
+#third step
+mids<- histogram$mids
+mids
+
+#Q3
+classes <-c()
+
+for(i in 1:length(breaks)-1){
+  classes[i]<-paste("{",breaks[i],",",breaks[i+1],"}")
+}
+
+cbind(classes=classes,frequency=freq)
+
+#Q4
+#draw in the same hist with freq polygon same plot
+lines(histogram$mids,freq)
+
+#new plot
+plot(mids,freq,type="o",main = "freq poloygon no of shareholders",
+     ylab = "frequency",xlab = "shareholder", ylim = c(0,max(freq)))
+
+plot(mids,freq,type="p",main = "freq poloygon no of shareholders",
+     ylab = "frequency",xlab = "shareholder", ylim = c(0,max(freq)))
+
+plot(mids,freq,type="l",main = "freq poloygon no of shareholders",
+     ylab = "frequency",xlab = "shareholder", ylim = c(0,max(freq)))
+
+
+#Q5
+
+cum.freq<-cumsum(freq)
+cum.freq
+
+#empty vector
+
+cum.freq<-cumsum(freq)
+cum.freq
+new<-c()
+
+for (i in 1:length(breaks)) {
+  if(i==1){
+    new[i]=0
+  } else {
+    new[i] = cum.freq[i-1]
+  }
+}
+
+plot(breaks,new,type="o",main = "freq poloygon no of shareholders",
+     ylab = "cummulative frequency",xlab = "shareholder", ylim = c(0,max(cum.freq)))
+
+cbind(upper=breaks,cumfreq=new) #cum freq starts from 0
+
+
+#Q6
+sum(freq)*0.75
+abline(h=sum(freq)*0.75,v=207)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
