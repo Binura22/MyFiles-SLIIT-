@@ -1,0 +1,25 @@
+A = []
+
+for v in range(0,10):
+    A.append(int(input('Enter number to search :')))
+print(A)
+
+
+#if the array is not sorted
+#def bubblesort(A):
+
+def binary_search(A,min,max,key):
+    #bubblesort(A):
+    if max < min:
+        return False
+    else:
+        mid = ((min+max)//2)
+        if A[mid] > key:
+            return binary_search(A,min,mid-1,key)
+        elif A[mid] < key:
+            return binary_search(A,mid+1,max,key)
+        else:
+            return mid
+
+ans = binary_search(A,0,len(A)-1,36)
+print('index of the key:',ans)
